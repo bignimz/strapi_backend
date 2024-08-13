@@ -1,0 +1,45 @@
+
+GET http://localhost:1337/api/reviews
+
+###
+GET http://localhost:1337/api/family-members
+
+###
+GET http://localhost:1337/api/family-members/1
+
+###
+POST http://localhost:1337/api/family-members
+
+
+{
+  "data": {
+    "name": "Jane Doe",
+    "date_of_birth": "2002-01-01",
+    "gender": "Female",
+    "is_alive": true,
+    "date_of_death": null,
+    "place_of_birth": "USA",
+    "occupation": "High School Student",
+    "biographical_information": "Jane is in high school.",
+    "photo": null
+  }
+}
+
+###
+GET http://localhost:1337/auth/local
+
+{
+  "identifier": "blackactivethemes@gmail.com",
+  "password": "Mombasa@001"
+}
+
+
+###
+POST http://localhost:1337/auth/local/register
+{
+  "username": "bignimz",
+  "email": "allanrebbman@gmail.com",
+  "password": "pa$$me"
+}
+
+

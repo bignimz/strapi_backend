@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "family_members",
+  "info": {
+    "singularName": "family-member",
+    "pluralName": "family-members",
+    "displayName": "FamilyMember",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "date_of_birth": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "required": true
+    },
+    "is_alive": {
+      "type": "boolean"
+    },
+    "date_of_death": {
+      "type": "date"
+    },
+    "place_of_birth": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "biographical_information": {
+      "type": "richtext"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::family-member.family-member",
+      "mappedBy": "parent"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::family-member.family-member",
+      "inversedBy": "children"
+    },
+    "certificate": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::certificate.certificate",
+      "mappedBy": "member"
+    }
+  }
+}
