@@ -860,6 +860,17 @@ export interface ApiFamilyMemberFamilyMember extends Schema.CollectionType {
       'oneToOne',
       'api::certificate.certificate'
     >;
+    mothers_clan: Attribute.String;
+    nationality: Attribute.String;
+    county: Attribute.String;
+    village: Attribute.String;
+    posterity: Attribute.String;
+    branch: Attribute.String;
+    clan: Attribute.String;
+    thigh: Attribute.String;
+    email: Attribute.Email;
+    mobile: Attribute.String;
+    address: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

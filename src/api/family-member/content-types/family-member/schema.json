@@ -60,6 +60,39 @@
       "relation": "oneToOne",
       "target": "api::certificate.certificate",
       "mappedBy": "member"
+    },
+    "mothers_clan": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "county": {
+      "type": "string"
+    },
+    "village": {
+      "type": "string"
+    },
+    "posterity": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "clan": {
+      "type": "string"
+    },
+    "thigh": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
     }
   }
 }
